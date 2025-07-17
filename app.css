@@ -116,10 +116,13 @@ table {
   width: 100%;
   border: 2px solid beige;
 }
+.company {
+  text-align: start;
+}
 td {
   border: none;
   padding: 3px;
-  text-align: left;
+  text-align: start;
 }
 .table-main {
   width: 100%;
