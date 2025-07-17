@@ -188,4 +188,7 @@ button.delete {
     display: flex;
     flex-direction: row;
   }
+  .company {
+    min-width: 120px;
+  }
 }
