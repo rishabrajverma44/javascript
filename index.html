@@ -4,66 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <title>Job Application Tracker</title>
   </head>
   <body>
     <div class="app">
       <h1 class="header">Job Application Tracker</h1>
-      <div class="w-full" id="statusCounts">
+      <div class="" id="statusCounts">
         Job Applications: 0 | Applied: 0 | Interviewing: 0 | Hired: 0 |
         Rejected: 0
       </div>
       <div class="main">
-        <div class="left container">
-          <h2 style="text-align: center;">Application Form</h2>
+        <div class="left">
+          <h2 style="text-align: center">Application Form</h2>
           <form id="applicationForm">
             <label for="company"> Complany Name :</label>
-            <input
-              type="text"
-              id="company"
-              placeholder="Company name" />
-              <span class="validation-error" id="erorCompany">Enter company name</span>
+            <input type="text" id="company" placeholder="Company name" />
+            <span class="validation-error" id="erorCompany"
+              >Enter company name</span
+            >
             <label for="role"> Role :</label>
-            <input
-              type="text"
-              id="role"
-              placeholder="Enter role" />
-             <span class="validation-error" id="erorJobRole">Enter job role</span>
+            <input type="text" id="role" placeholder="Enter role" />
+            <span class="validation-error" id="erorJobRole"
+              >Enter job role</span
+            >
 
             <label for="jobType">JobType :</label>
-            <select id="jobType" class="form-control" >
-              <option value="" selected disabled >select job type</option>
+            <select id="jobType" class="form-control">
+              <option value="" selected disabled>Select job type</option>
               <option value="Remote">Remote</option>
               <option value="Onsite">Onsite</option>
               <option value="Hybrid">Hybrid</option>
             </select>
-            <span class="validation-error" id="erorJobType">Select job type</span>
+            <span class="validation-error" id="erorJobType"
+              >Select job type</span
+            >
             <label for="location" id="locationLabel">Location :</label>
-            <input
-              type="text"
-              id="location"
-              placeholder="Enter location" />
-             <span class="validation-error" id="erorLocation">Enter location name</span>
+            <input type="text" id="location" placeholder="Enter location" />
+            <span class="validation-error" id="erorLocation"
+              >Enter location name</span
+            >
             <label for="date">Appliction date :</label>
-            <input
-              type="date"
-              id="date"
-              disabled/>
+            <input type="date" id="date" />
 
             <label for="status">Application Status:</label>
-            <select id="status" class="form-control" >
-              <option value="" selected disabled>select status</option>
+            <select id="status" class="form-control">
+              <option value="" selected disabled>Select status</option>
               <option value="Applied">Applied</option>
               <option value="Interviewing">Interviewing</option>
               <option value="Rejected">Rejected</option>
               <option value="Hired">Hired</option>
             </select>
-            <span class="validation-error" id="erorJobStatus">Select job status</span>
+            <span class="validation-error" id="erorJobStatus"
+              >Select job status</span
+            >
             <label for="notes">Notes:</label>
-            <input id="notes" class="form-control"></input>
+            <textarea id="notes" rows="3" class="form-control"></textarea>
 
-            <button type="submit" id="submitBtn" class="btn btn-primary mt-2 p-1">
+            <button
+              type="submit"
+              id="submitBtn"
+              class="btn btn-primary mt-2 p-1">
               Add Application
             </button>
           </form>
@@ -72,30 +75,27 @@
         <div class="right">
           <h3 class="table-heading">Job Applications Table</h3>
           <div class="searchBox">
-           <input
-           type="text"
-           id="searchInput"
-           placeholder="Search"/>
-           <i class="fas fa-times"  id="clearBtn"></i>
+            <input type="text" id="searchInput" placeholder="Search" />
+            <i class="fas fa-times" id="clearBtn"></i>
           </div>
 
           <div class="table-main">
-          <table>
-            <thead >
-              <tr>
-                <th></th>
-                <th class="company">Company</th>
-                <th class="company">Role</th>
-                <th class="company">Type</th>
-                <th class="company">Location</th>
-                <th class="company">Date</th>
-                <th class="company">Status</th>
-                <th style="min-width: 200px;">Notes</th>
-                <th style="text-align:center">Actions</th>
-              </tr>
-            </thead>
-            <tbody id="List"></tbody>
-          </table>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="company">Company</th>
+                  <th class="company">Role</th>
+                  <th class="company">Type</th>
+                  <th class="company">Location</th>
+                  <th class="company" id="date">Date</th>
+                  <th class="company">Status</th>
+                  <th style="min-width: 200px">Notes</th>
+                  <th style="text-align: center">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="List"></tbody>
+            </table>
           </div>
         </div>
       </div>

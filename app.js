@@ -138,7 +138,7 @@ function showForm(filteredData = null) {
     <td >${element.jobType}</td>
     <td >${element.location}</td>
     <td >${element.date}</td>
-    <td style='font-weight:bold; color:${
+    <td style='color:${
       { element }.element.status == "Hired"
         ? "green;"
         : { element }.element.status == "Rejected"
@@ -154,7 +154,7 @@ function showForm(filteredData = null) {
     tableList.appendChild(row);
   });
   const total = localStorageData.length;
-  statusCounts.innerHTML = `<div>Job Application : ${total} | Applied: ${counts.Applied} | Interviewing : ${counts.Interviewing} | Hired : <span style="color:green; font-weight: bold">${counts.Hired}</span> | Rejected: <span style="color:red; font-weight:bold">${counts.Rejected}</span></div>`;
+  statusCounts.innerHTML = `<div>Job Application : ${total} | Applied: ${counts.Applied} | Interviewing : ${counts.Interviewing} | Hired : <span style="color:green">${counts.Hired}</span> | Rejected: <span style="color:red">${counts.Rejected}</span></div>`;
   if (total === 0) {
     tableList.innerHTML =
       "<tr><td colspan='9' class='noApplication'><h3>No application found !</h3><p>Add new appliction</p></td></tr>";
